@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Db Extraction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+  </head>
+  <body>
+	<div class = "container">
+       <div class = "box">Rank: {{ result[0] }}</div>
+       <div class = "box">Org Name: {{ result[1] }}</div>
+       <div class = "box">State Code: {{result[2]}}</div>
+       <div class = "box">Population: {{result[3]}}</div>
+       <div class = "box">Region: {{result[4]}}</div>
+       <div class = "box">Median Salary: {{result[5]}}</div>
+       <div class="box">
+        Website:
+            <a href="{{ result[6] }}" target="_blank">{{ result[6] }}</a>
+       </div>
+
+       <div class = "box">Phone No: {{result[7]}}</div>
+       <div class = "box">City: {{result[8]}}</div>
+       <div class = "box">Founded: {{result[9]}}</div>
+       <div class = "box">Stu-Fac : {{result[10]}}</div>
+       <div class = "box">Student Population: {{result[11]}}</div>
+       <div class = "box">Percent of Financial aid: {{result[13]}}</div>
+       <div class = "box">Financial aid granted: {{result[14]}}</div>
+    </div>
+
+  </body>
+</html>

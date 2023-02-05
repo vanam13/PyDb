@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>University Rank Checker</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='hello.css') }}">
+   </head>
+    <body>
+    <div class="container">
+      <h1>Welcome to University Rank Checker</h1>
+    </div>
+    <table>
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>University Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for rr in rank_rows %}
+      <tr>
+        <td>{{ rr.rank }}</td>
+        <td>{{ rr.organization }}</td>
+        <td><a href="http://127.0.0.1:5000/{{ rr.rank }}">More details</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+  </body>
+</html>
